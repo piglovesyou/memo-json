@@ -1,6 +1,6 @@
 # memo-json
 
-A memoization decorator caching JSON results to disk. Speed up development applications depending on external resources.
+Memoize functions returning JSON by caching results to disk. Useful for applications depending on external resources.
 
 To install:
 
@@ -31,16 +31,6 @@ The first run of the above code will generate cache like below being reused in t
 .memo/getRemoteData-dee827.json
 ```
 
-## Debug
-
-Debug logs are available when you have `DEBUG` environment.
-
-```bash
-DEBUG=memo-json ts-node your-script.ts
-
-# memo-json Cached .memo/xxx-5c9359.json +0ms
-```
-
 ## Options
 
 You can own your cusomized `memo()` funciton by `createMemo(opts)`.
@@ -56,16 +46,20 @@ const memo = createMemo({
 const getDataMemo = memo(function getData() { ... })
 ```
 
+## Debug
+
+Debug logs are available when you have `DEBUG` environment.
+
+```bash
+DEBUG=memo-json ts-node your-script.ts
+
+# memo-json Cached .memo/xxx-5c9359.json +0ms
+```
+
 Available options:
 
 - `dir` - Optional string. `".memo"` by default.
 - `enable` - Optional boolean. `true` by default.
-
-## CLI
-
-```bash
-memo clean  # Equivalent to `rm -rf .memo`
-```
 
 ## License
 
