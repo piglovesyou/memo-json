@@ -1,12 +1,14 @@
 {
   "name": "memo-json",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
@@ -28,6 +30,6 @@
   "scripts": {
     "test": "jest",
     "build": "rm -rf lib && tsc -p tsconfig.production.json",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build && yarn test"
   }
 }
