@@ -2,6 +2,7 @@
   "name": "memo-json",
   "version": "0.1.0",
   "description": "",
+  "homepage": "https://github.com/piglovesyou/memo-json",
   "main": "lib/index.js",
   "keywords": [],
   "author": "",

@@ -2,9 +2,11 @@
 
 A memoization decorator caching JSON results to disk. Speed up development applications depending on external resources.
 
-## Install package
+To install:
 
 ```bash
+npm install memo-json
+# or
 yarn add memo-json
 ```
 
@@ -12,7 +14,7 @@ yarn add memo-json
 
 ```typescript
 // src/data.ts
-import {memo} from 'memo'
+import { memo } from 'memo-json'
 
 const getDataMemo = memo(function getData(param: string) { ... })
 
@@ -41,8 +43,23 @@ DEBUG=memo-json ts-node your-script.ts
 
 ## Options
 
-* `dir` - Optional, `".memo"` by default. ex. `@memo({ dir: '__generated__' })`
-* `enable` - Optional, `true` by default. ex. `@memo({ enable: process.env.NODE_ENV !== 'production' })`
+You can own your cusomized `memo()` funciton by `createMemo(opts)`.
+
+```typescript
+import { createMemo } from "memo-json";
+
+const memo = createMemo({
+  dir: "__generated",
+  enable: process.env.NODE_ENV !== "production",
+});
+
+const getDataMemo = memo(function getData() { ... })
+```
+
+Available options:
+
+- `dir` - Optional string. `".memo"` by default.
+- `enable` - Optional boolean. `true` by default.
 
 ## CLI
 
