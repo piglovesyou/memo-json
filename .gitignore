@@ -1,0 +1,4 @@
+lib
+.memo
+src/**/*.js
+*.tgz
