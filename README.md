@@ -29,6 +29,16 @@ The first run of the above code will generate cache like below being reused in t
 .memo/getRemoteData-dee827.json
 ```
 
+## Debug
+
+Debug logs are available when you have `DEBUG` environment.
+
+```bash
+DEBUG=memo-json ts-node your-script.ts
+
+# memo-json Cached .memo/xxx-5c9359.json +0ms
+```
+
 ## Options
 
 * `dir` - Optional, `".memo"` by default. ex. `@memo({ dir: '__generated__' })`

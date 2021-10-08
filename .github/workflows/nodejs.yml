@@ -23,7 +23,7 @@ jobs:
             - name: yarn install, lint, and test
               run: |
                   yarn install --mode=skip-build
-                  yarn test
+                  yarn build
                   yarn test
               env:
                   CI: true
