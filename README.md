@@ -1,26 +1,32 @@
-# memo
+# memo-json
 
 A memoization decorator caching JSON results to disk. Speed up development applications depending on external resources.
+
+## Install package
+
+```bash
+yarn add memo-json
+```
 
 ## Usage
 
 ```typescript
 // src/data.ts
-import { memo } from 'memo'
+import {memo} from 'memo'
 
-@memo
-function getRemoteData(param: string) { ... }
+const getDataMemo = memo(function getData(param: string) { ... })
 
-await getRemoteData('a') // Access remote
-await getRemoteData('a') // 🥶 Hit cache!
-await getRemoteData('b') // Access remote again. A cache key includes function arguments.
+await getDataMemo('a') // Access remote
+await getDataMemo('a') // 🥶 Hit cache!
+await getDataMemo('b') // Access remote again. A cache key includes function arguments.
 ```
 
 The first run of the above code will generate cache like below being reused in the subsequent calls.
 
 ```
-.memo/src/data/getRemoteData-4e6c99.json
-.memo/src/data/getRemoteData-dee827.json
+# ${process.env.cwd()}/${functionName}-${paramHash}.json
+.memo/getRemoteData-4e6c99.json
+.memo/getRemoteData-dee827.json
 ```
 
 ## Options
