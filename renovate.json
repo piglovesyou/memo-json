@@ -1,0 +1,11 @@
+{
+  "rangeStrategy": "pin",
+  "prConcurrentLimit": 5,
+  "packageRules": [
+    {
+      "matchPackagePatterns": [".*"],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    }
+  ]
+}
