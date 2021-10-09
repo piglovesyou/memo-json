@@ -1,4 +1,4 @@
-# memo-json
+# memo-json [![Node CI](https://github.com/piglovesyou/memo-json/actions/workflows/nodejs.yml/badge.svg)](https://github.com/piglovesyou/memo-json/actions/workflows/nodejs.yml)
 
 Memoize functions returning JSON by caching results to disk. Useful for applications depending on external resources.
 
