@@ -3,8 +3,7 @@
   "prConcurrentLimit": 5,
   "packageRules": [
     {
-      "matchPackagePatterns": [".*"],
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     }
   ]
