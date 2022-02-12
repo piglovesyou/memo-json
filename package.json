@@ -16,7 +16,7 @@
     "@babel/preset-typescript": "7.16.0",
     "@types/debug": "4.1.7",
     "@types/jest": "27.4.0",
-    "@types/node": "16.11.0",
+    "@types/node": "16.11.24",
     "husky": "7.0.2",
     "jest": "27.4.5",
     "prettier": "2.4.1",
