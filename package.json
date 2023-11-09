@@ -14,7 +14,7 @@
     "@babel/plugin-proposal-decorators": "7.23.2",
     "@babel/preset-env": "7.23.2",
     "@babel/preset-typescript": "7.23.2",
-    "@types/debug": "4.1.11",
+    "@types/debug": "4.1.12",
     "@types/jest": "29.5.8",
     "@types/node": "20.9.0",
     "husky": "8.0.3",
