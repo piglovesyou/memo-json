@@ -13,7 +13,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "7.24.6",
     "@babel/preset-env": "7.24.6",
-    "@babel/preset-typescript": "7.24.1",
+    "@babel/preset-typescript": "7.24.6",
     "@types/debug": "4.1.12",
     "@types/jest": "29.5.12",
     "@types/node": "20.12.12",
