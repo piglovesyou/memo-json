@@ -25,7 +25,7 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "debug": "4.3.5",
+    "debug": "4.3.6",
     "make-dir": "4.0.0"
   },
   "scripts": {
