@@ -14,7 +14,7 @@ const cwd = process.cwd();
 
 const defaultDir = ".memo";
 
-function createMemo({
+export function createMemo({
   dir = defaultDir,
   enable = true,
 }: CreateMemoOptions = {}): <T extends Function>(fn: T) => T {
